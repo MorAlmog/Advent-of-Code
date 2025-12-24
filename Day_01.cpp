@@ -1,4 +1,3 @@
-#pragma once
 #include "Day_01.h"
 
 using std::string;

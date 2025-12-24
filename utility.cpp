@@ -9,6 +9,10 @@
 
 namespace util {
 
+	int abs(int num) {
+		return (num < 0 ? -num : num);
+	}
+
 	std::string file_string(std::string file_name) {
 
 		std::ifstream file;

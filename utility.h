@@ -6,6 +6,7 @@
 
 namespace util {
 
+	int abs(int num);
 	std::string file_string(std::string file_name);
 	int convert_string_to_numbers(std::string_view s_num, char sign);
 	void parse_rotation_string(std::string& rotations, std::vector<int>& vec);

@@ -18,15 +18,22 @@ int main() {
 static int password_calc(const std::vector<int>& vec) {
 	int password = 0;
 	int pos = START_POS;
+	int prev_pos = pos;
 	for (int i = 0; i < vec.size(); i++) {
 		pos += vec[i];
+		//if (pos < 0) {
+		//	password++;
+		//}
 		int r = pos % 100;
 		int q = (pos - r) / 100;
-		std::cout << "pos: " << pos << " = r: " << r << ", q: " << q << std::endl;
-		if (!pos) {
+		std::cout << "vec[" << i << "]: " << vec[i];
+		std::cout << " pos: " << pos << " = r: " << r << ", q: " << q << std::endl;
+		if (!r) {
 			password++;
 		}
-		pos %= 100;
+		pos = (r < 0 ? r + 100 : r);
+		std::cout << "pos after mod: " << pos << std::endl;
+		prev_pos = pos;
 		password += util::abs(q);
 		std::cout << "current password: " << password << std::endl;
 	}

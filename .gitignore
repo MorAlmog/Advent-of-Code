@@ -1,1 +1,26 @@
-.vs
+# Visual Studio
+.vs/
+x64/
+Debug/
+Release/
+
+# User-specific VS files
+*.user
+*.user.*
+*.suo
+
+# Build artifacts
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.tlog
+*.log
+
+# Binaries
+*.exe
+*.dll
+*.lib
+
+# Runtime outputs
+outputs/

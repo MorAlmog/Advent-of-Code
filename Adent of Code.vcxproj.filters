@@ -24,7 +24,7 @@
     <ClCompile Include="utility.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Day_02.cpp">
+    <ClCompile Include="Day_01b.cpp">
       <Filter>Resource Files</Filter>
     </ClCompile>
     <ClCompile Include="io.cpp">
@@ -38,10 +38,13 @@
     <ClInclude Include="utility.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Day_02.h">
+    <ClInclude Include="Day_01b.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="io.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="constants.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

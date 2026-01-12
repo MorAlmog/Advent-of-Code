@@ -1,6 +1,7 @@
 #include "Day_01b.h"
 #include "utility.h"
 #include "io.h"
+#include "constants.h"
 
 #include <iostream>
 
@@ -9,9 +10,6 @@ int day_01b() {
 	std::vector<int> rotation_vec;
 
 	util::parse_rotation_string(rotations, rotation_vec);
-	for (int i = 0; i < rotation_vec.size(); i++) {
-		std::cout << rotation_vec[i] << std::endl;
-	}
 	return password_calc(rotation_vec);
 }
 

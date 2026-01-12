@@ -132,14 +132,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Day_01.cpp" />
-    <ClCompile Include="Day_02.cpp" />
+    <ClCompile Include="Day_01b.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="io.cpp" />
     <ClCompile Include="utility.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="constants.h" />
     <ClInclude Include="Day_01.h" />
-    <ClInclude Include="Day_02.h" />
+    <ClInclude Include="Day_01b.h" />
     <ClInclude Include="io.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>

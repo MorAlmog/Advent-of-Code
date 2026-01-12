@@ -33,7 +33,6 @@ namespace util {
 		buffer << file.rdbuf();
 		std::string file_str = buffer.str();
 
-
 		file.close();
 
 		return file_str;
@@ -66,6 +65,5 @@ namespace util {
 		}
 		return num;
 	}
-
 };
 

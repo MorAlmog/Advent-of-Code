@@ -1,4 +1,6 @@
 #include "Day_01.h"
+#include "utility.h"
+#include "constants.h"
 
 using std::string;
 using std::vector;

@@ -13,6 +13,12 @@ namespace util {
 		return (num < 0 ? -num : num);
 	}
 
+	void print_vec(std::vector<int>& vec) {
+		for (int i = 0; i < vec.size(); i++) {
+			std::cout << vec[i] << std::endl;
+		}
+	}
+
 	std::string file_string(std::string file_name) {
 
 		std::ifstream file;
@@ -43,14 +49,10 @@ namespace util {
 			auto it2 = std::find_if(it, rotations.end(), [](char c) {
 				return (c == '\n' || c == '\0');
 				});
-			// TODO: this is wrong (find_if expects func in third arg. ask how to debug this.
-			//auto it2 = std::find_if(it, rotations.end(), '\n');
-
 
 			vec.push_back(convert_string_to_numbers(std::string_view(it + 1, it2), *it));
 			rotations.erase(rotations.begin(), it2);
 		}
-
 	}
 
 	int convert_string_to_numbers(std::string_view s_num, char sign) {

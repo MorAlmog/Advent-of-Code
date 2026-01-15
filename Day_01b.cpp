@@ -2,7 +2,6 @@
 #include "utility.h"
 #include "io.h"
 #include "constants.h"
-
 #include <iostream>
 
 int day_01b() {

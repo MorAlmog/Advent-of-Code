@@ -13,9 +13,11 @@ namespace util {
 		return (num < 0 ? -num : num);
 	}
 
-	void print_vec(std::vector<int>& vec) {
+	template <typename T>
+	void print_vec(const std::vector<T>& vec) {
+		if (vec.empty()) std::cout << "<empty>\n";
 		for (int i = 0; i < vec.size(); i++) {
-			std::cout << vec[i] << std::endl;
+			std::cout << vec[i] << '\n';
 		}
 	}
 

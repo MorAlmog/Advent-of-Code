@@ -1,4 +1,5 @@
 #include "Day_01b.h"
+#include "Day_01.h"
 #include "utility.h"
 #include "io.h"
 #include "constants.h"
@@ -8,7 +9,7 @@ int day_01b() {
 	std::string rotations = util::file_string("Day_01_input.txt");
 	std::vector<int> rotation_vec;
 
-	util::parse_rotation_string(rotations, rotation_vec);
+	parse_rotation_string(rotations, rotation_vec);
 	return password_calc(rotation_vec);
 }
 

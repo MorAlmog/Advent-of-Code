@@ -40,32 +40,33 @@ namespace util {
 		return file_str;
 	}
 
-	void parse_rotation_string(std::string& rotations, std::vector<int>& vec) {
-		while (!rotations.empty()) {
-			// R\L
-			auto it = std::find_if(rotations.begin(), rotations.end(), [](char c) {
-				return std::isalpha(static_cast<unsigned char>(c));
-				});
-			// el
-			auto it2 = std::find_if(it, rotations.end(), [](char c) {
-				return (c == '\n' || c == '\0');
-				});
+	//void parse_rotation_string(std::string& rotations, std::vector<int>& vec) {
+	//	while (!rotations.empty()) {
+	//		// R\L
+	//		auto it = std::find_if(rotations.begin(), rotations.end(), [](char c) {
+	//			return std::isalpha(static_cast<unsigned char>(c));
+	//			});
+	//		// el
+	//		auto it2 = std::find_if(it, rotations.end(), [](char c) {
+	//			return (c == '\n' || c == '\0');
+	//			});
+	//		std::size_t num = convert_string_to_numbers(std::string_view(it + 1, it2));
+	//		if (*it == 'L') num *= -1;
+	//		vec.push_back(num);
+	//		rotations.erase(rotations.begin(), it2);
+	//	}
+	//}
 
-			vec.push_back(convert_string_to_numbers(std::string_view(it + 1, it2), *it));
-			rotations.erase(rotations.begin(), it2);
-		}
-	}
-
-	int convert_string_to_numbers(std::string_view s_num, char sign) {
-		int num = 0;
+	// takes a string and converts to positive integer (for now correctness of string will be assumed)
+	// TODO - error proof + except throw
+	std::size_t convert_string_to_numbers(std::string_view s_num) {
+		std::size_t num = 0;
 		for (int i = 0; i < s_num.size(); i++) {
 			num *= 10;
 			num += s_num[i] - 48;
 		}
-		if (sign == 'L') {
-			num *= -1;
-		}
 		return num;
 	}
+
 };
 

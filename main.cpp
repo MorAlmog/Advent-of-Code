@@ -3,11 +3,13 @@
 #include <iostream>
 #include "Day_01.h"
 #include "Day_01b.h"
+#include "Day_02.h"
 
 using std::cout;
 using std::endl;
 
-//int main() {
-//	cout << "Day 01 solution: " << day_01() << endl;
-//	cout << "Day 01b solution: " << day_01b() << endl;
-//}
+int main() {
+	cout << "Day 01 solution: " << day_01() << '\n';
+	cout << "Day 01b solution: " << day_01b() << '\n';
+	cout << "Day 02 solution: " << day_02() << '\n';
+}

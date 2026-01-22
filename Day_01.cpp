@@ -26,7 +26,7 @@ void parse_rotation_string(std::string& rotations, std::vector<int>& vec) {
 		auto it2 = std::find_if(it, rotations.end(), [](char c) {
 			return (c == '\n' || c == '\0');
 			});
-		std::size_t num = util::convert_string_to_numbers(std::string_view(it + 1, it2));
+		std::size_t num = util::str_to_num(std::string_view(it + 1, it2));
 		if (*it == 'L') num *= -1;
 		vec.push_back(num);
 		rotations.erase(rotations.begin(), it2);

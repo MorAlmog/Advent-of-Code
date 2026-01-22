@@ -30,6 +30,9 @@ public:
 	const_iterator end() const;
 
 	void push_back(const T& val1,const T& val2) { this->data.push_back({ val1, val2 }); }
+	std::size_t size() {
+		return data.size();
+	}
 	// will be need later as part of rule of 5
 	const std::array<T, N>& at(std::size_t arr) const;
 	std::array<T, N>& at(std::size_t arr);
@@ -43,7 +46,7 @@ public:
 			const std::array<T, N>& arr = *it;
 			std::cout << "[";
 			for (std::size_t i = 0; i < arr.size() ; i++) {
-				if (i + 1 < arr.size()) std::cout << arr[i] << ", ";
+				if (i + 1 < arr.size()) std::cout << arr[i] << ",";
 				else std::cout << arr[i] << "]\n";
 			}
 		}

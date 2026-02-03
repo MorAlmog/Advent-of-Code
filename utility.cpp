@@ -5,6 +5,8 @@
 #include <sstream>
 #include <algorithm>
 #include <cctype>
+#include <stdexcept>
+#include <type_traits>
 #include "VecND.h"
 #include "utility.h"
 
@@ -25,10 +27,11 @@ namespace util {
 		return true;
 	}
 
-	// returns factors vec with array [p_i,q_i] for num = fact p_i^q_i
-	// W.C O(sqrt(n)) avg.c O(logn)
-	VecND<std::size_t, 2>& factors(std::size_t num, VecND<std::size_t, 2>& factors) {
+	// returns prime_factors vec with array [p_i,q_i] for num = fact p_i^q_i
+	// O(sqrt(n))
+	VecND<std::size_t, 2> prime_factors(std::size_t num) {
 		std::size_t n = num;
+		VecND<size_t, 2> prime_factors;
 		for (std::size_t p = 2; p * p <= n; p++) {
 			if (n % p != 0) continue;
 
@@ -38,25 +41,37 @@ namespace util {
 				n /= p;
 			} while (n % p == 0);
 
-			factors.push_back(p, q);
+			prime_factors.push_back(p, q);
 		}
 
-		if (n > 1) factors.push_back(n, 1);
+		if (n > 1) prime_factors.push_back(n, 1);
 
-		return factors;
+		return prime_factors;
+	}
 
+	std::vector<size_t> factors(std::size_t num) {
+		VecND<std::size_t, 2> primes = prime_factors(num);
+		std::vector<size_t> divisors = { 1 };
+		std::vector<size_t> new_divs = {};
+
+		for (std::size_t i = 0; i < primes.size(); i++) {
+			new_divs = {};
+			size_t p = primes.at(i)[0];
+			size_t divisors_size = divisors.size();
+			for (std::size_t j = 0; j < divisors_size; j++) {
+				size_t d = divisors[j];
+				for (std::size_t q = 1; q <= primes.at(i)[1]; q++) {
+					new_divs.push_back(d * util::ipow(p, q));
+				}
+				divisors.insert(divisors.end(), new_divs.begin(), new_divs.end());
+				new_divs = {};
+			}
+		}
+		return divisors;
 	}
 
 	bool belongs_in_range(int num, int min_range, int max_range) {
 		return (num >= min_range && num <= max_range);
-	}
-
-	template <typename T>
-	void print_vec(const std::vector<T>& vec) {
-		if (vec.empty()) std::cout << "<empty>\n";
-		for (int i = 0; i < vec.size(); i++) {
-			std::cout << vec[i] << '\n';
-		}
 	}
 
 	std::string file_string(std::string file_name) {

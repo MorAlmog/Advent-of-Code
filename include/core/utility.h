@@ -48,10 +48,10 @@ namespace util {
 	bool belongs_in_range(int num, int min_range, int max_range);
 	//void print_vec(std::vector<int>& vec);
 	template <typename T>
-	void print_vec(const std::vector<T>& vec) {
-		if (vec.empty()) std::cout << "<empty>\n";
+	void print_vec(const std::vector<T>& vec, std::ostream& out = std::cout) {
+		if (vec.empty()) out << "<empty>\n";
 		for (int i = 0; i < vec.size(); i++) {
-			std::cout << vec[i] << '\n';
+			out << vec[i] << '\n';
 		}
 	}
 	std::string file_string(std::string file_name);

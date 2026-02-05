@@ -142,6 +142,7 @@
     <ClInclude Include="include\days\Day_01b.h" />
     <ClInclude Include="include\days\Day_02.h" />
     <ClInclude Include="include\days\Day_02b.h" />
+    <ClInclude Include="include\days\Day_03.h" />
     <ClInclude Include="include\VecND.h" />
   </ItemGroup>
   <ItemGroup>
@@ -151,6 +152,7 @@
     <ClCompile Include="src\days\Day_01b.cpp" />
     <ClCompile Include="src\days\Day_02.cpp" />
     <ClCompile Include="src\days\Day_02b.cpp" />
+    <ClCompile Include="src\days\Day_03.cpp" />
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>

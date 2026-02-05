@@ -1,5 +1,3 @@
-#pragma once
-
 template <typename T, std::size_t N>
 typename VecND<T,N>::iterator VecND<T,N>::begin() {
     return data.begin();

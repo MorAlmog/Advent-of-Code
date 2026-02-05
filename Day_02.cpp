@@ -1,4 +1,3 @@
-#pragma once
 #include "Day_02.h"
 #include "utility.h"
 #include "io.h"
@@ -74,7 +73,8 @@ static size_t sum_invalids_in_range(const std::array<string, 2>& range) {
 	return sum;
 }
 
-static void parse_rangeID(const string& str, VecND<string, 2>& str_range_vec) {
+// receives a string of range IDs, and returns an ND string vec with range in arr[0] and arr[1]
+void parse_rangeID(const string& str, VecND<string, 2>& str_range_vec) {
 	size_t row = 0;
 	bool col = false;
 	string range = "";
@@ -96,6 +96,3 @@ static void parse_rangeID(const string& str, VecND<string, 2>& str_range_vec) {
 	str_range_vec.at(row)[col] = range;
 	return;
 }
-
-
-

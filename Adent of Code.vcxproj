@@ -137,6 +137,7 @@
     <None Include="VecND.tpp">
       <FileType>Document</FileType>
     </None>
+    <ClCompile Include="Day_02b.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="io.cpp" />
     <ClCompile Include="utility.cpp" />
@@ -146,6 +147,7 @@
     <ClInclude Include="Day_01.h" />
     <ClInclude Include="Day_01b.h" />
     <ClInclude Include="Day_02.h" />
+    <ClInclude Include="Day_02b.h" />
     <ClInclude Include="VecND.h" />
     <ClInclude Include="io.h" />
     <ClInclude Include="utility.h" />

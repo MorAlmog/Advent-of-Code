@@ -1,6 +1,6 @@
-#include "Day_02.h"
-#include "utility.h"
-#include "io.h"
+#include "days/Day_02.h"
+#include "core/utility.h"
+#include "core/io.h"
 #include "VecND.h"
 #include <iostream>
 
@@ -12,7 +12,7 @@ using std::string;
 size_t day_02() {
 	VecND<string, 2> str_range_vec;
 
-	string rangeID_str = util::file_string("Day_02_input.txt");
+	string rangeID_str = util::file_string("input/Day_02_input.txt");
 	parse_rangeID(rangeID_str, str_range_vec);
 
 	size_t sum_invalids = 0;

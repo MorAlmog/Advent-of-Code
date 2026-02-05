@@ -3,10 +3,10 @@
 #include <set>
 #include <stdexcept>
 #include <cassert>
-#include "Day_02b.h"
-#include "Day_02.h"
-#include "utility.h"
-#include "io.h"
+#include "days/Day_02b.h"
+#include "days/Day_02.h"
+#include "core/utility.h"
+#include "core/io.h"
 #include "VecND.h"
 
 using std::size_t;
@@ -16,7 +16,7 @@ io::FileOutput file("Day_02b_output.txt");
 
 size_t day_02b() {
 	VecND<string, 2> str_range_vec;
-	string rangeID_str = util::file_string("Day_02_input.txt");
+	string rangeID_str = util::file_string("input/Day_02_input.txt");
 	parse_rangeID(rangeID_str, str_range_vec);
 
 	std::set<size_t> invalid_IDs;

@@ -1,5 +1,5 @@
-#include "Day_01.h"
-#include "utility.h"
+#include "days/Day_01.h"
+#include "core/utility.h"
 #include "constants.h"
 
 using std::string;
@@ -7,7 +7,7 @@ using std::vector;
 
 int day_01() {
 
-	string rotations = util::file_string("Day_01_input.txt");
+	string rotations = util::file_string("input/Day_01_input.txt");
 	vector<int> rotation_vec;
 
 	parse_rotation_string(rotations, rotation_vec);
@@ -35,7 +35,7 @@ void parse_rotation_string(std::string& rotations, std::vector<int>& vec) {
 }
 
 static int password_calc(const std::vector<int>& vec) {
-	int pos = START_POS;
+	int pos = day01::START_POS;
 	int password = 0;
 	for (int i = 0; i < vec.size(); i++) {
 		pos += vec[i];

@@ -1,12 +1,12 @@
-#include "Day_01b.h"
-#include "Day_01.h"
-#include "utility.h"
-#include "io.h"
+#include "days/Day_01b.h"
+#include "days/Day_01.h"
+#include "core/utility.h"
+#include "core/io.h"
 #include "constants.h"
 #include <iostream>
 
 int day_01b() {
-	std::string rotations = util::file_string("Day_01_input.txt");
+	std::string rotations = util::file_string("input/Day_01_input.txt");
 	std::vector<int> rotation_vec;
 
 	parse_rotation_string(rotations, rotation_vec);
@@ -16,7 +16,7 @@ int day_01b() {
 // for all n,m in N exist r<m,q in N so that n = qm+r
 static int password_calc(const std::vector<int>& vec) {
 	int password = 0;
-	int pos = START_POS;
+	int pos = day01::START_POS;
 	//io::FileOutput day02("day_02.txt");	// test helper
 	for (int i = 0; i < vec.size(); i++) {
 		

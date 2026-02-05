@@ -6,7 +6,7 @@
 #include <stdexcept>
 #include <type_traits>
 #include "VecND.h"
-#include "utility.h"
+#include "core/utility.h"
 
 namespace util {
 

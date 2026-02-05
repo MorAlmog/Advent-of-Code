@@ -1,3 +1,5 @@
 #pragma once
 
-constexpr int START_POS = 50;
+namespace day01 {
+    constexpr int START_POS = 50;
+}

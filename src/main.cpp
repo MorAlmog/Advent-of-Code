@@ -1,8 +1,8 @@
 #include <iostream>
-#include "Day_01.h"
-#include "Day_01b.h"
-#include "Day_02.h"
-#include "Day_02b.h"
+#include "days/Day_01.h"
+#include "days/Day_01b.h"
+#include "days/Day_02.h"
+#include "days/Day_02b.h"
 
 using std::cout;
 using std::endl;

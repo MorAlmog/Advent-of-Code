@@ -135,6 +135,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Day_03b.h" />
     <ClInclude Include="include\constants.h" />
     <ClInclude Include="include\core\io.h" />
     <ClInclude Include="include\core\utility.h" />
@@ -146,6 +147,7 @@
     <ClInclude Include="include\VecND.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Day_03b.cpp" />
     <ClCompile Include="src\core\io.cpp" />
     <ClCompile Include="src\core\utility.cpp" />
     <ClCompile Include="src\days\Day_01.cpp" />

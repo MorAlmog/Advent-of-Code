@@ -48,7 +48,7 @@ static size_t find_max_index(const string& str, size_t i) {
     return idx;
 }
 
-static std::vector<string> parse_string_to_vec(const string& str) {
+std::vector<string> parse_string_to_vec(const string& str) {
     string curr = "";
     std::vector<string> vec;
     for (char c : str) {

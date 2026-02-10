@@ -45,7 +45,10 @@
     <ClInclude Include="include\days\Day_03.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Day_03b.h">
+    <ClInclude Include="include\days\Day_03b.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ds\Stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -74,11 +77,12 @@
     <ClCompile Include="src\days\Day_03.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Day_03b.cpp">
+    <ClCompile Include="src\days\Day_03b.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="include\VecND.tpp" />
+    <None Include="include\ds\Stack.tpp" />
   </ItemGroup>
 </Project>

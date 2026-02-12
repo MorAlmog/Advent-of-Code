@@ -6,6 +6,7 @@
 #include "days/Day_03.h"
 #include "days/Day_03b.h"
 #include "days/Day_04.h"
+#include "days/Day_04b.h"
 
 using std::cout;
 using std::endl;
@@ -18,5 +19,6 @@ int main() {
 	cout << "Day 03 solution: " << day_03() << '\n';
 	cout << "Day 03b solution: " << day_03b() << '\n';
 	cout << "Day 04 solution: " << day_04() << '\n';
+	cout << "Day 04b solution: " << day_04b() << '\n';
 	return 0;
 }

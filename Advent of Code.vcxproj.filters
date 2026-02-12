@@ -51,6 +51,12 @@
     <ClInclude Include="include\ds\Stack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\days\Day_04.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\days\Day_04b.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\main.cpp">
@@ -78,6 +84,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\days\Day_03b.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\days\Day_04.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\days\Day_04b.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
